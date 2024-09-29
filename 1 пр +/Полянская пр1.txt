@@ -1,0 +1,41 @@
+#Полянская Полина Алексеевна БИСО-01-20
+
+#Задание 1
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+for i in range(len(a)):
+    if a[i]<5:
+        print(a[i])
+
+#Задание 2
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+obsh_el = list(set(a) & set(b))
+print(obsh_el)
+
+#Задание 3
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+for i in range(10):
+    s = b[i] + b[i+1]
+    print(s)
+    s = 0
+
+#Задание 4
+n = int(input())
+str_n = str(n)
+nns = str_n + str_n
+nnns = nns + str_n
+print(int(n)+int(nns)+int(nnns))
+
+#Задание 5
+import os
+directory = 'C:\!Полина\8семестр\ОАПАКпУОСлинукс'
+files = os.listdir(directory)
+print(files)
+
+#Задание 6
+num = int(input())
+sum = 0
+while num > 0:
+    sum += num % 10
+    num //= 10
+print(sum)
